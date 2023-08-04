@@ -7,13 +7,13 @@ import React from "react";
 const About = () => {
     return (
         <div className="pb-5">
-            <div className="w-full h-72 relative">
+            <div className="w-full h-96 relative">
                 <div>
-                    <Image src='https://images.pexels.com/photos/581669/pexels-photo-581669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className="object-cover grayscale" fill={true} alt="about-page" />
+                    <Image src='https://images.pexels.com/photos/1729993/pexels-photo-1729993.jpeg?auto=compress&cs=tinysrgb&w=600' className="object-cover grayscale" fill={true} alt="about-page" />
                 </div>
-                <div className="absolute bottom-6 left-5 bg-green-500 px-5 py-4 text-gray-50">
-                    <h1 className="font-extrabold text-2xl">Digital Storytelling</h1>
-                    <p className="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae ex iure, suscipit non possimus?</p>
+                <div className="absolute bottom-6 left-5 px-10 py-6 bg-gradient-to-r from-green-500 to-slate-300 bg-clip-text text-transparent">
+                    <h1 className="font-extrabold text-5xl pb-5">Digital Storytelling</h1>
+                    <p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae ex iure, <br /> suscipit non possimus?</p>
                 </div>
             </div>
             <div className="flex gap-[100px]">

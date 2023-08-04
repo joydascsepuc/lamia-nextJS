@@ -14,7 +14,7 @@ export default function Home() {
                 <Button url='/portfolio' text='See our blog' />
             </div>
             <div className="flex-1 flex flex-col gap-12">
-                <Image src={Hero} alt="Home-image" className="w-full h-auto object-cover" />
+                <Image src={Hero} alt="Home-image" className="w-full h-auto object-cover animate-little-bounce" />
             </div>
         </div>
     );
