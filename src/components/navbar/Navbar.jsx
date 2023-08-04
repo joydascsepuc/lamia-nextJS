@@ -39,7 +39,7 @@ const navLinks = [
 const Navbar = () => {
     return (
         <div className="h-20 flex justify-between items-center">
-            <Link href="/" className="font-bold text-lg">Lamia</Link>
+            <Link href="/" className="font-extrabold text-2xl text-white">Lamia</Link>
             <div className="flex items-center gap-5">
                 {
                     navLinks.map((navLink) => {
