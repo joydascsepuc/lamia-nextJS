@@ -3,9 +3,7 @@ import React from "react";
 
 async function getData(id) {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts/' + id, {
-        next: {
-            revalidate: 10
-        }
+        cache: 'no-store'
     });
 
     if (!res.ok) {
@@ -17,9 +15,7 @@ async function getData(id) {
 
 async function getUserData(id) {
     const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id, {
-        next: {
-            revalidate: 10
-        }
+        cache: 'no-store'
     });
 
     if (!res.ok) {
@@ -48,7 +44,6 @@ const images = [
 ];
 
 const BlogPost = async ({ params }) => {
-
     const data = await getData(params.id);
     const userData = await getUserData(data.userId);
     const randomImageIndex = Math.floor(Math.random() * images.length);
