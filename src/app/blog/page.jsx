@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const data = [
@@ -40,15 +41,17 @@ const Blog = () => {
             {
                 data.map((item) => {
                     return (
-                        <div className="flex my-10" key={item.id}>
-                            <div className="flex-1 h-[200px] w-[200px] relative">
-                                <Image src={item.imageURL} alt="post-images" fill={true} className="object-cover" />
+                        <Link href={'/blog/' + item.id} key={item.id}>
+                            <div className="flex my-10" >
+                                <div className="flex-1 h-[200px] w-[200px] relative">
+                                    <Image src={item.imageURL} alt="post-images" fill={true} className="object-cover" />
+                                </div>
+                                <div className="flex-1 px-12 flex flex-col gap-5 justify-center">
+                                    <h2 className="text-2xl font-bold">{item.title}</h2>
+                                    <p className="text-md">{item.desc}</p>
+                                </div>
                             </div>
-                            <div className="flex-1 px-12 flex flex-col gap-5 justify-center">
-                                <h2 className="text-2xl font-bold">{item.title}</h2>
-                                <p className="text-md">{item.desc}</p>
-                            </div>
-                        </div>
+                        </Link>
                     )
                 })
             }
